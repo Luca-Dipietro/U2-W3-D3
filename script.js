@@ -27,7 +27,13 @@ const fetchLibrary = function () {
       const booksContainer = document.getElementById("booksRow");
       books.forEach((book) => {
         const col = document.createElement("div");
-        col.classList.add("col-md-4", "col-lg-3", "col-xl-2", "mb-4");
+        col.classList.add(
+          "col-sm-6",
+          "col-md-4",
+          "col-lg-3",
+          "col-xl-2",
+          "mb-4"
+        );
 
         const card = document.createElement("div");
         card.classList.add("card");
