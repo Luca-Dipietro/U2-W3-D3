@@ -36,7 +36,7 @@ const fetchLibrary = function () {
         );
 
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("card", "h-100");
 
         const img = document.createElement("img");
         img.classList.add("card-img-top");
@@ -62,7 +62,7 @@ const fetchLibrary = function () {
         price.textContent = "Prezzo: " + book.price + "$";
 
         const discardBtn = document.createElement("button");
-        discardBtn.classList.add("btn", "btn-danger");
+        discardBtn.classList.add("btn", "btn-danger", "card-button");
         discardBtn.textContent = "Discard";
         discardBtn.addEventListener("click", () => {
           card.remove();
@@ -80,6 +80,9 @@ const fetchLibrary = function () {
 
         booksContainer.appendChild(col);
       });
+    })
+    .catch((error) => {
+      console.log(error);
     });
 };
 
