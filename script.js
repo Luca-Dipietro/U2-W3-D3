@@ -65,7 +65,7 @@ const fetchLibrary = function () {
         discardBtn.classList.add("btn", "btn-danger", "card-button");
         discardBtn.textContent = "Discard";
         discardBtn.addEventListener("click", () => {
-          card.remove();
+          booksContainer.removeChild(col);
         });
         cardBody.appendChild(title);
         cardBody.appendChild(asin);
