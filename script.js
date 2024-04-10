@@ -30,7 +30,7 @@ const fetchLibrary = function () {
         col.classList.add("col-sm-6", "col-md-4", "col-lg-3", "mb-4");
 
         const card = document.createElement("div");
-        card.classList.add("card", "h-100");
+        card.classList.add("card");
 
         const img = document.createElement("img");
         img.classList.add("card-img-top");
@@ -65,11 +65,9 @@ const fetchLibrary = function () {
         cardBody.appendChild(asin);
         cardBody.appendChild(category);
         cardBody.appendChild(price);
-        cardBody.appendChild(discardBtn);
-
         card.appendChild(img);
         card.appendChild(cardBody);
-
+        card.appendChild(discardBtn);
         col.appendChild(card);
 
         booksContainer.appendChild(col);
